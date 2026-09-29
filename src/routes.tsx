@@ -30,4 +30,4 @@ export const router = createBrowserRouter([
       { path: "minesweeper", element: <></> },
     ],
   },
-])
+], { basename: import.meta.env.BASE_URL })
