@@ -733,8 +733,8 @@ export function DesktopLayout() {
                 {trayOpen && <TrayIcons />}
               </div>
 
-              <Volume2 size={14} className="text-dark/60" />
-              <MonitorSmartphone size={14} className="text-dark/60" />
+              <Volume2 size={14} className="hidden md:block text-dark/60" />
+              <MonitorSmartphone size={14} className="hidden md:block text-dark/60" />
             </div>
 
             {/* Clock + date -> opens calendar flyout */}
@@ -744,7 +744,7 @@ export function DesktopLayout() {
                 onClick={() => setCalOpen((o) => !o)}
                 aria-expanded={calOpen}
                 aria-label="Buka kalender"
-                className={`flex flex-col items-end justify-center pl-3 pr-3 h-full transition-colors ${
+                className={`flex flex-col items-end justify-center pl-2 pr-2 md:pl-3 md:pr-3 h-full transition-colors ${
                   calOpen
                     ? "bg-[#3E6FD8]/20"
                     : "text-dark hover:bg-black/[0.06] active:bg-black/10"
@@ -756,7 +756,7 @@ export function DesktopLayout() {
                     minute: "2-digit",
                   })}
                 </span>
-                <span className="font-mono text-[10px] uppercase font-bold leading-none whitespace-nowrap text-dark/80 mt-1">
+                <span className="hidden md:block font-mono text-[10px] uppercase font-bold leading-none whitespace-nowrap text-dark/80 mt-1">
                   {formatDateCompact(time)}
                 </span>
               </button>
